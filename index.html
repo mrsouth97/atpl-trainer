@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0b5cff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="ATPL Trainer">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="stylesheet" href="./styles.css">
+<title>ATPL Exam Trainer</title>
+</head>
+<body>
+<div id="loading" class="loading"><div class="loading-inner"><div class="spinner"></div><b>Đang mở bộ đề ATPL…</b><div class="tiny" style="margin-top:8px">6,465 câu • 11 môn</div></div></div>
+<div class="app">
+<section id="home">
+  <div class="hero"><h1>ATPL Exam Trainer</h1><p>11 môn • 6,465 câu • Study / Exam • lưu câu sai • chạy offline sau lần mở đầu.</p><div class="statusbar"><span><i id="offlineDot" class="statusdot"></i> <span id="offlineText">Đang chuẩn bị offline…</span></span><span id="netText" class="tiny"></span></div></div>
+  <div id="installCard" class="card install-card"><h3>Cài lên Màn hình chính iPad</h3><div>Trong Safari: <b>Chia sẻ</b> → <b>Thêm vào Màn hình chính</b> → bật <b>Mở dưới dạng ứng dụng web</b> → <b>Thêm</b>.</div><div class="footer-note">Chờ trạng thái phía trên chuyển thành “Offline ready” trước khi thử dùng khi mất mạng.</div></div>
+  <div id="resumeCard" class="card resume-card hidden"></div>
+  <div class="card">
+    <div class="statline" id="stats"></div>
+    <h3>Chọn môn</h3>
+    <div class="grid" id="subjects"></div>
+  </div>
+  <div class="card">
+    <div class="row">
+      <div class="field"><label>Chế độ</label><select id="mode"><option value="study">Study — hiện đúng/sai ngay</option><option value="exam">Exam — chấm cuối lượt</option><option value="wrong">Ôn lại câu đã sai</option></select></div>
+      <div class="field"><label>Số câu</label><select id="count"><option>10</option><option>20</option><option selected>50</option><option>100</option><option value="all">Tất cả</option></select></div>
+    </div>
+    <label class="toggle"><input id="shuffleQ" type="checkbox" checked> Trộn thứ tự câu hỏi</label>
+    <label class="toggle"><input id="shuffleA" type="checkbox"> Trộn đáp án (tự tắt ở câu có hình)</label>
+    <div class="row" style="margin-top:10px"><button class="btn primary" id="startBtn">Bắt đầu luyện</button><button class="btn secondary" id="allBtn">Chọn tất cả môn</button><button class="btn danger" id="resetBtn">Xoá tiến độ</button></div>
+    <div class="footer-note">Tiến độ, lượt đang làm và danh sách câu sai được lưu trên thiết bị bằng localStorage.</div>
+  </div>
+</section>
+<section id="quiz" class="hidden">
+  <div class="sticky"><div class="quizbar"><button class="btn secondary" id="homeBtn" style="padding:9px 12px;min-height:40px">←</button><div class="meta"><b id="quizTitle"></b><small id="quizMeta"></small></div><span class="pill" id="scorePill"></span></div><div class="progress"><i id="prog"></i></div></div>
+  <div class="card" id="qcard"></div>
+</section>
+<section id="results" class="hidden"></section>
+</div>
+<script src="./data.js"></script>
+<script src="./app.js"></script>
+</body></html>

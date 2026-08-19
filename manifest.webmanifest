@@ -1,0 +1,31 @@
+{
+  "id": "./",
+  "name": "ATPL Exam Trainer - 10 Subjects",
+  "short_name": "ATPL Trainer",
+  "description": "ATPL exam trainer: 11 subjects, 6,465 questions, Study/Exam, wrong-answer review and offline support.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "background_color": "#f4f7fb",
+  "theme_color": "#0b5cff",
+  "orientation": "any",
+  "lang": "vi",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
