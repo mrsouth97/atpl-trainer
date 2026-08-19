@@ -1,4 +1,4 @@
-const CACHE='atpl-trainer-v3-pof';
+const CACHE='atpl-trainer-v4-13subjects';
 const ASSETS=['./index.html','./styles.css','./app.js','./data.js','./manifest.webmanifest','./icon-192.png','./icon-512.png','./apple-touch-icon.png'];
 self.addEventListener('install',event=>{
   event.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll(ASSETS);await self.skipWaiting()})());

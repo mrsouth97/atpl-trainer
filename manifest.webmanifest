@@ -2,7 +2,7 @@
   "id": "./",
   "name": "ATPL Exam Trainer - 10 Subjects",
   "short_name": "ATPL Trainer",
-  "description": "ATPL exam trainer: 11 subjects, 6,465 questions, Study/Exam, wrong-answer review and offline support.",
+  "description": "ATPL exam trainer: 13 subjects, 7,266 questions, Study/Exam, wrong-answer review and offline support.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
